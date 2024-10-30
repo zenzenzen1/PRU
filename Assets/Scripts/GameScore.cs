@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GameScore : MonoBehaviour
 {
     public Text scoreTextUI;
-    public Text highScoreText;
+    // public Text highScoreText;
     int score = 0;
     int hiScoreCount = 0;
     public int Score
@@ -48,8 +48,8 @@ public class GameScore : MonoBehaviour
     void UpdateScoreTextUI(int scores)
     {
 
-        string hiScoreStr = string.Format("{0:000000}", hiScoreCount);
-        highScoreText.text = hiScoreStr.ToString();
+        // string hiScoreStr = string.Format("{0:000000}", hiScoreCount);
+        // highScoreText.text = hiScoreStr.ToString();
 
         string scoreStr = string.Format("{0:000000}", scores);
         scoreTextUI.text = scoreStr.ToString();

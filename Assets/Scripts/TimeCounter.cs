@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class TimeCounter : MonoBehaviour
 {
     public Text timeUI;
-    public Text timeRecordUI;
+    // public Text timeRecordUI;
 
     float startTime;
     public float ellapsedTime;
@@ -23,12 +23,12 @@ public class TimeCounter : MonoBehaviour
         Debug.Log(record);
         if (record == 0 || record == Mathf.Infinity)
         {
-            timeRecordUI.text = "Unknown";
+            // timeRecordUI.text = "Unknown";
         } else
         {
             var minute = (int)record / 60;
             var second = (int)record % 60;
-            timeRecordUI.text = string.Format("{0:00}:{1:00}", minute, second);
+            // timeRecordUI.text = string.Format("{0:00}:{1:00}", minute, second);
         }
         startCounter = true;
     }
@@ -58,7 +58,7 @@ public class TimeCounter : MonoBehaviour
     }
     public void UpdateRecordUI()
     {
-        timeRecordUI.text = GetEllaspedTime();
+        // timeRecordUI.text = GetEllaspedTime();
     }
     public string GetEllaspedTime()
     {

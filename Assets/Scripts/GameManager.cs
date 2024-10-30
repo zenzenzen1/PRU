@@ -11,9 +11,9 @@ public class GameManager : MonoBehaviour
     public GameObject player;
     public GameObject GameOverGO;
     public GameObject scoreUITextGO;
-    public GameObject hiScoreUITextGO;
+    // public GameObject hiScoreUITextGO;
     public GameObject TimeCounterGO;
-    public GameObject TimeRecordGO;
+    // public GameObject TimeRecordGO;
     public GameObject FinalScoreGO;
     public GameObject FinalTimeGO;
     public GameObject FinalTimeText;
@@ -79,10 +79,11 @@ public class GameManager : MonoBehaviour
                 //Display game over 
                 GameOverGO.SetActive(true);
 
-
+                PlayerPrefs.SetFloat(Setting.time, TimeCounterGO.GetComponent<TimeCounter>().ellapsedTime);
+                PlayerPrefs.SetInt(Setting.score, scoreUITextGO.GetComponent<GameScore>().Score);
                 //Change game manager state 
-                Invoke("ChangeToOpeningState", 4f);
-
+                SceneManager.LoadScene(Setting.endScene, LoadSceneMode.Single);
+                // Invoke("ChangeToOpeningState", 4f);
 
 
                 break;
@@ -112,10 +113,14 @@ public class GameManager : MonoBehaviour
                 FinalTimeText.SetActive(true);
 
                 FinalTimeGO.GetComponent<Text>().text = TimeCounterGO.GetComponent<TimeCounter>().GetEllaspedTime();
+                // PlayerPrefs.SetString(Setting.time, TimeCounterGO.GetComponent<TimeCounter>().GetEllaspedTime());
                 FinalScoreGO.GetComponent<Text>().text = scoreUITextGO.GetComponent<GameScore>().Score + "";
 
                 //Change game manager state 
-                Invoke("ChangeToOpeningState", 4f);
+                // Invoke("ChangeToOpeningState", 4f);
+                PlayerPrefs.SetFloat(Setting.time, TimeCounterGO.GetComponent<TimeCounter>().ellapsedTime);
+                PlayerPrefs.SetInt(Setting.score, scoreUITextGO.GetComponent<GameScore>().Score);
+                SceneManager.LoadScene(Setting.endScene, LoadSceneMode.Single);
                 break;
             case GameManagerState.Opening:
 
@@ -156,7 +161,7 @@ public class GameManager : MonoBehaviour
     }
     public void ExitGame()
     {
-        SceneManager.LoadSceneAsync(0);
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
         UnityEngine.Debug.Log("Quit success");
     }
 }

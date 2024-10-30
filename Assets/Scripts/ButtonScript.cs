@@ -18,8 +18,12 @@ public class PlayButton : MonoBehaviour
     {
     }
     public void Play(){
-        SceneManager.LoadScene("PlayScene", LoadSceneMode.Single);
+        SceneManager.LoadScene("LevelScene", LoadSceneMode.Single);
         
+    }
+    
+    public void QuitGame(){
+        Application.Quit();
     }
     
     public void CloseInstructionButton(){
@@ -49,9 +53,29 @@ public class PlayButton : MonoBehaviour
     public void BackToMenu()
     {
         Debug.Log("Back to menu");
-        SceneManager.LoadScene("MenuScene", LoadSceneMode.Single);
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
     
+    public void EsayButton(){
+        PlayerPrefs.SetInt(Setting.level, 1);
+        SceneManager.LoadScene(Setting.playScene, LoadSceneMode.Single);
+    }
+    
+    public void MediumButton(){
+        PlayerPrefs.SetInt(Setting.level, 2);
+        SceneManager.LoadScene(Setting.playScene, LoadSceneMode.Single);
+    }
+    
+    public void HardButton(){
+        PlayerPrefs.SetInt(Setting.level, 3);
+        SceneManager.LoadScene(Setting.playScene, LoadSceneMode.Single);
+    }
+    public void PlayAgain(){
+        SceneManager.LoadScene(Setting.playScene, LoadSceneMode.Single);
+    }
+    public void MainMenu(){
+        SceneManager.LoadScene(Setting.mainMenuScene, LoadSceneMode.Single);
+    }
     public void Quit(){
         // GameObject.FindObjectOfType<ShipCollision>().GetComponent<ShipCollision>().ChangeToGameOverScene();
     }

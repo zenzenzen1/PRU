@@ -430,15 +430,59 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1189601942760583021, guid: 2c6555faa41be6940a6fac048b0d73fd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 750.5006
+      objectReference: {fileID: 0}
+    - target: {fileID: 1189601942760583021, guid: 2c6555faa41be6940a6fac048b0d73fd, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 99.3543
+      objectReference: {fileID: 0}
+    - target: {fileID: 1189601942760583021, guid: 2c6555faa41be6940a6fac048b0d73fd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 6.4086
+      objectReference: {fileID: 0}
+    - target: {fileID: 1189601942760583021, guid: 2c6555faa41be6940a6fac048b0d73fd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 77.0774
+      objectReference: {fileID: 0}
     - target: {fileID: 1413717019842702133, guid: 2c6555faa41be6940a6fac048b0d73fd, type: 3}
       propertyPath: m_text
       value: Snow Boarding
+      objectReference: {fileID: 0}
+    - target: {fileID: 1887361261215537988, guid: 2c6555faa41be6940a6fac048b0d73fd, type: 3}
+      propertyPath: m_Transition
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2587478413885189554, guid: 2c6555faa41be6940a6fac048b0d73fd, type: 3}
       propertyPath: m_Name
       value: Menu
       objectReference: {fileID: 0}
+    - target: {fileID: 3413181488880397435, guid: 2c6555faa41be6940a6fac048b0d73fd, type: 3}
+      propertyPath: m_text
+      value: 'Press A,D to controlle player
+
+        Press Space to jump
+
+        Go
+        to the end of map to finish the game
+
+        Collect coin to increase point.
+        Easy: 10, Medium: 20, Hard: 30
+
+        Point coin increase by level difficulty
+
+        Health
+        decrease by level difficulty. Easy: 3, Medium: 2, Hard: 1
+
+        Collise
+        with ground or rock will decrease 1 health'
+      objectReference: {fileID: 0}
     - target: {fileID: 4060579062604494848, guid: 2c6555faa41be6940a6fac048b0d73fd, type: 3}
+      propertyPath: m_Transition
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4591719129098028065, guid: 2c6555faa41be6940a6fac048b0d73fd, type: 3}
       propertyPath: m_Transition
       value: 3
       objectReference: {fileID: 0}

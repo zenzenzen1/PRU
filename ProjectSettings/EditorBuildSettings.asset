@@ -8,4 +8,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Settings/Scenes/URP2DSceneTemplate.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: d871052eab61f824eb416cac5e3f69c7
+  - enabled: 1
+    path: Assets/Scenes/LevelScene.unity
+    guid: 985e971d631b16c429041d2befe4b78d
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: 58ecf495579540a4ebdcbe8fa55ed616
+  - enabled: 1
+    path: Assets/Scenes/EasyScene.unity
+    guid: 56395040efdd0e14086c90d753959fb6
   m_configObjects: {}

@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - BonusItem
+  - HighScoreTextTag
+  - Ground
+  - ScoreTextTag
+  - Stone
+  - Rock
   layers:
   - Default
   - TransparentFX
