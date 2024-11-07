@@ -24,9 +24,12 @@ public class Driller : Enemy
     protected override void Awake()
     {
         base.Awake();
+        
 
         _playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         _groundLayer = LayerMask.GetMask("Ground");
+        
+        score = 30;
     }
 
     void Update()
@@ -192,5 +195,12 @@ public class Driller : Enemy
     {
          bool isWalled = actorTransform.localScale.x == 1 ? controller.IsRightWalled : controller.IsLeftWalled;
          return isWalled;
+    }
+    
+    protected override IEnumerator OnDied()
+    {
+        // DeadEnemyManager.AddDeadEnemy(gameObject.name);
+        Debug.Log("Driller Died. Score " + score);
+        return base.OnDied();
     }
 }

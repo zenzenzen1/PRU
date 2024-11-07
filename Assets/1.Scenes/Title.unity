@@ -341,7 +341,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Team8
+  m_text: Group 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 485eab06d3c542045baceeec53228e86, type: 2}
   m_sharedMaterial: {fileID: -5795619385816805877, guid: 485eab06d3c542045baceeec53228e86, type: 2}
@@ -1182,6 +1182,10 @@ PrefabInstance:
       propertyPath: manualText
       value: 
       objectReference: {fileID: 125925883}
+    - target: {fileID: 182014754, guid: 048021d0463ff5d4bab289ac8ac9fddd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 302192554, guid: 048021d0463ff5d4bab289ac8ac9fddd, type: 3}
       propertyPath: m_fontColor.b
       value: 0.8392157
@@ -1206,6 +1210,10 @@ PrefabInstance:
       propertyPath: m_fontColor.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 358596167, guid: 048021d0463ff5d4bab289ac8ac9fddd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 459755810, guid: 048021d0463ff5d4bab289ac8ac9fddd, type: 3}
       propertyPath: m_fontColor.b
       value: 0.8392157
@@ -1229,6 +1237,10 @@ PrefabInstance:
     - target: {fileID: 549790725, guid: 048021d0463ff5d4bab289ac8ac9fddd, type: 3}
       propertyPath: m_fontColor.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 647460347, guid: 048021d0463ff5d4bab289ac8ac9fddd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 647460349, guid: 048021d0463ff5d4bab289ac8ac9fddd, type: 3}
       propertyPath: manualText
@@ -1729,6 +1741,10 @@ PrefabInstance:
     - target: {fileID: 5352057276208867215, guid: 048021d0463ff5d4bab289ac8ac9fddd, type: 3}
       propertyPath: m_fontColor.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716560859302581217, guid: 048021d0463ff5d4bab289ac8ac9fddd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5766108375513047547, guid: 048021d0463ff5d4bab289ac8ac9fddd, type: 3}
       propertyPath: m_fontColor.b

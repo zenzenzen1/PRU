@@ -10,6 +10,7 @@ public class OnlyGroundPatrolEnemy : Enemy
 
     protected override void Awake()
     {
+        score = 10;
         base.Awake();
 
         if (_frontCliffChecker == null)
@@ -20,6 +21,7 @@ public class OnlyGroundPatrolEnemy : Enemy
         {
             _backCliffChecker = transform.Find("BackCliffChecker").GetComponent<Transform>();
         }
+        
     }
 
     void Update()
@@ -53,4 +55,11 @@ public class OnlyGroundPatrolEnemy : Enemy
     bool FrontCliffChecked() => !Physics2D.Raycast(_frontCliffChecker.position, Vector2.down, 1.0f, LayerMask.GetMask("Ground"));
    
     bool BackCliffChecked() => !Physics2D.Raycast(_backCliffChecker.position, Vector2.down, 1.0f, LayerMask.GetMask("Ground"));
+    
+    protected override IEnumerator OnDied()
+    {
+        // DeadEnemyManager.AddDeadEnemy(gameObject.name);
+        Debug.Log("Ground Enemy Died. Score " + score);
+        return base.OnDied();
+    }
 }

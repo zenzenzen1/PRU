@@ -12,6 +12,8 @@ public abstract class Enemy : Actor
     protected EnemyBodyTackle bodyTackle = null;    
     protected EnemyData enemyData;                 
     protected LayerMask playerLayer;
+    
+    public int score = 0;
 
     protected override void Awake()
     {
@@ -68,6 +70,9 @@ public abstract class Enemy : Actor
         Vector2 position = new Vector2(transform.position.x, transform.position.y + 2);
         ObjectPoolManager.instance.GetPoolObject("HealingPiece", position);
         
+        
+        PlayerPrefs.SetInt(Setting.score, PlayerPrefs.GetInt("score", 0) + score);
+        Debug.Log("score : " + PlayerPrefs.GetInt("score"));
         yield return null;
 
         

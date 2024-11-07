@@ -8,5 +8,8 @@
     },
     "unity": "2020.2",
     "description": "An Aseprite and PyxelEdit Animation Importer for Unity",
-    "hideInEditor": false
-  }
+    "hideInEditor": false,
+    "dependencies": {
+        "com.talecrafter.animationimporter": "file:"
+    }
+}

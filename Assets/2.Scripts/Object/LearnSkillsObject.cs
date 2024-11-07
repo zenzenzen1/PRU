@@ -46,7 +46,6 @@ public class LearnSkillsObject : MonoBehaviour
     {
         Vector2 pos = transform.position;
         pos.y += 1.25f;
-        // 플레이어가 오브젝트와 충돌시 스킬 학습
         if(Physics2D.OverlapCircle(pos, radius, _playerLayer))
         {
             _anim.SetTrigger("Empty");

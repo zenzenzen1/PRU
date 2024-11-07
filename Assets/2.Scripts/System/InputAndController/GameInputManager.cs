@@ -76,7 +76,7 @@ public static class GameInputManager
         Key.DownArrow,
         Key.Space,
         Key.Escape,
-        Key.Delete
+        Key.Backspace
     };
 
    
@@ -88,7 +88,10 @@ public static class GameInputManager
         GamepadButton.DpadDown,
         GamepadButton.A,
         GamepadButton.B,
-        GamepadButton.X
+        GamepadButton.X,
+        GamepadButton.Y,
+        GamepadButton.Start,
+        GamepadButton.Select
     };
 
     static Dictionary<PlayerActions, Key> keyboardActionsMap;          

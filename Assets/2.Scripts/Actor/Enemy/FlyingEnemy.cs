@@ -26,6 +26,8 @@ public class FlyingEnemy : Enemy
         _playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 
         _originPos = actorTransform.position;
+        
+        score = 20;
     }
     void Update()
     {
@@ -73,8 +75,9 @@ public class FlyingEnemy : Enemy
                     {
                         Flip();
                     }
-                    _isAttacking = true;   
+                    // _isAttacking = true;   
                     _timeRemainingToAttack = enemyData.attackDelay; 
+                    // _timeRemainingToAttack = 2; 
 
                    
                     StartCoroutine(Attack());
@@ -91,9 +94,9 @@ public class FlyingEnemy : Enemy
         if(playerDistance <= enemyData.detectRange)
         {
             Vector2 playerDirection = (_playerTransform.position - _attackPos.position).normalized;
-#if UNITY_EDITOR
+            
             Debug.DrawRay(_attackPos.position, playerDirection * playerDistance, Color.yellow);
-#endif
+
            
             return !Physics2D.Raycast(_attackPos.position, playerDirection, playerDistance, LayerMask.GetMask("Ground"));
         }
@@ -150,5 +153,11 @@ public class FlyingEnemy : Enemy
 
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, enemyData.detectRange);
+    }
+    
+    protected override IEnumerator OnDied()
+    {
+        Debug.Log("FlyingEnemy OnDied. Score " + score);
+        return base.OnDied();
     }
 }
